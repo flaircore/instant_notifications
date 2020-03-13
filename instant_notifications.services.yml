@@ -1,0 +1,8 @@
+services:
+  instant_notifications.database:
+    class: \Drupal\instant_notifications\Service\DbService
+    arguments: []
+    calls:
+      - [setDatabase, ['@database']]
+      - [setEntity, ['@entity_type.manager']]
+

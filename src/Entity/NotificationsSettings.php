@@ -12,13 +12,13 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines SlackSettings entity.
+ * Defines NotificationsSettings entity.
  *
- * @ingroup slack_settings
+ * @ingroup notifications_settings
  *
  * @ContentEntityType(
- *   id = "slack_settings",
- *   label = @Translation("Notifications Settings"),
+ *   id = "notifications_settings",
+ *   label = @Translation("NotificationsSettings"),
  *   base_table = "notifications_settings",
  *   entity_keys = {
  *     "id" = "id",
@@ -109,7 +109,7 @@ class NotificationsSettings extends ContentEntityBase implements ContentEntityIn
             ]);
 
         // relate each form with a channel(s)
-        $fields['form_channel'] = BaseFieldDefinition::create('text_long')
+        $fields['form_channel'] = BaseFieldDefinition::create('string')
             ->setLabel(t('Form id and Channel'))
             ->setDescription(t('Form id and channel(s) to send to.'))
             ->setSettings([
