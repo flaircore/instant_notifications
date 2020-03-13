@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains instant_notifications.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function instant_notifications_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the instant_notifications module.
+    case 'help.page.instant_notifications':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Instant Notifications via slack,discord,devteam') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function instant_notifications_theme() {
+  return [
+    'instant_notifications' => [
+      'render element' => 'children',
+    ],
+  ];
+}

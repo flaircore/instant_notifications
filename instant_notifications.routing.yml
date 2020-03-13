@@ -1,0 +1,22 @@
+instant_notifications.notification_form:
+  path: '/webservices/instant_notifications/settings_form'
+  defaults:
+    _form: '\Drupal\instant_notifications\Form\NotificationForm'
+    _title: 'NotificationForm'
+  requirements:
+    _access: 'TRUE'
+
+instant_notifications.form_id_channel_id_controller_hello:
+  path: '/instant_notifications/hello/{name}'
+  defaults:
+    _controller: '\Drupal\instant_notifications\Controller\FormIdChannelIdController::hello'
+    _title: 'Testinhg controller'
+  requirements:
+    _permission: 'access content'
+instant_notifications.form_id_channel_id_controller_View:
+  path: '/instant_notifications/View'
+  defaults:
+    _controller: '\Drupal\instant_notifications\Controller\FormIdChannelIdController::View'
+    _title: 'Hewllo'
+  requirements:
+    _permission: 'access content'

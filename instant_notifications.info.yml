@@ -1,0 +1,5 @@
+name: 'Instant Notifications'
+type: module
+description: 'Instant Notifications via slack,discord,devteam'
+core: 8.x
+package: 'Notifications'
